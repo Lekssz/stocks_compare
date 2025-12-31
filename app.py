@@ -389,6 +389,10 @@ def plot_forecasts_multi(history_df, fcsts_dict, title="Forecast comparison"):
 
 st.title("Stocks: ARIMA vs Prophet vs LSTM (7/30-day)")
 
+st.caption(
+    "Interactive comparison of classical and deep learning time-series models "
+    "for short-horizon stock forecasting using real market data."
+)
 with st.sidebar:
     st.header("Controls")
     tickers = st.multiselect(
