@@ -1,5 +1,8 @@
 # Stock Forecast Lab — ARIMA & Prophet vs LSTM (Streamlit)
 
+## 🔗 Live Demo (Hosted on Streamlit Cloud)
+https://lekssz-stocks-compare-app-7wnbw9.streamlit.app/
+
 Compare short-horizon stock forecasts (7 & 30 days) using **ARIMA**, **Prophet**, and a lightweight **LSTM** against simple naïve baselines. 
 The app fetches daily prices from Yahoo Finance, plots all model forecasts on one chart, and scores models on a recent holdout window with **RMSE/MAE**.
 
@@ -36,17 +39,18 @@ The app fetches daily prices from Yahoo Finance, plots all model forecasts on on
 
 ## 🚀 Quick start
 
-> **Use Python 3.11.** (Avoid 3.12/3.13 to skip compiling heavy wheels like pandas/scipy from source.)
+> **Use Python 3.10.** (Avoid 3.12/3.13 to skip compiling heavy wheels like pandas/scipy.)
 
 ### macOS / Linux
 ### Fastest way to run (bypasses PATH/conda)
 From the project folder:
 ```bash
-./.venv311/bin/python -m streamlit run streamlit_app.py
+./.venv310/bin/python -m streamlit run streamlit_app.py
 
 ```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
+python3.10 -m venv .venv
+./.venv/bin/python
+
 
 python -m pip install --upgrade pip
 pip install -r requirements_full.txt
