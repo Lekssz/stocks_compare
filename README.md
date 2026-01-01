@@ -88,17 +88,22 @@ Notes
 ### `requirements.txt` 
 
 ```txt
-streamlit>=1.50
-yfinance>=0.2.66
-pandas<2.2
+streamlit>=1.36
+yfinance>=0.2.40
+
+pandas>=1.5,<2.2
 numpy==1.26.4
-plotly>=6.3.0
-scikit-learn>=1.7.2
+plotly>=5.22
+
+scikit-learn>=1.2,<1.5
+statsmodels>=0.14
 pmdarima==2.0.4
+
 prophet==1.1.5
 cmdstanpy<1.2
-tensorflow-cpu==2.15.0
-statsmodels>=0.14.5
+
+tensorflow-cpu>=2.13,<2.16
+
 ```
 
 > Prophet may download **CmdStan** on first run (a few minutes and ~1–2 GB). You can start with ARIMA + LSTM and enable Prophet later.
