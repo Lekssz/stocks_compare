@@ -45,7 +45,7 @@ The app fetches daily prices from Yahoo Finance, plots all model forecasts on on
 ### Fastest way to run (bypasses PATH/conda)
 From the project folder:
 ```bash
-./.venv310/bin/python -m streamlit run streamlit_app.py
+./.venv310/bin/python -m streamlit run app.py
 
 ```bash
 python3.10 -m venv .venv
@@ -55,7 +55,7 @@ python3.10 -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements_full.txt
 
-python -m streamlit run streamlit_app.py
+python -m streamlit run app.py
 ```
 
 ### Windows (PowerShell)
@@ -63,19 +63,19 @@ python -m streamlit run streamlit_app.py
 #### Fastest way to run (uses the venv’s Python directly)
 ```powershell
 # From the project root
-.\.venv311\Scripts\python.exe -m streamlit run streamlit_app.py
+.\.venv310\Scripts\python.exe -m streamlit run app.py
 First-time setup (create venv, install deps, run)
 # From the project root
-py -3.11 -m venv .venv
+py -3.10 -m venv .venv
 .\.venv\Scripts\Activate.ps1   # (PowerShell)
 # If you get a policy error, see the note below.
 
 python -m pip install --upgrade pip
 pip install -r requirements_full.txt
 
-python -m streamlit run streamlit_app.py
+python -m streamlit run app.py
 Notes
-   If your venv is named .venv311, replace .venv accordingly.
+   If your venv is named .venv310, replace .venv accordingly.
    If activation fails with an execution policy error:
 ```powershell
    Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
@@ -85,7 +85,7 @@ Notes
 
 ## 📦 Requirements
 
-### `requirements_full.txt` (recommended)
+### `requirements.txt` 
 
 ```txt
 streamlit>=1.50
@@ -150,8 +150,8 @@ You can also set a Plotly white template + consistent model colors in `streamlit
 
 ```
 .
-├─ streamlit_app.py
-├─ requirements_full.txt
+├─ app.py
+├─ requirements.txt
 └─ .streamlit/
    └─ config.toml   # optional theme
 ```
